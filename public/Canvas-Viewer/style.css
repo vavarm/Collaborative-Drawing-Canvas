@@ -1,0 +1,25 @@
+html,
+body {
+    background-color: #373d55;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvas-grid {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+    gap: 0;
+}

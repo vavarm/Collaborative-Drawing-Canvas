@@ -1,0 +1,1 @@
+// on init, get the array of the datas registered by the server and draw all previous lines

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Websockets drawing app</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+</head>
+
+<body>
+    <!--Error Modal displayed if the parameter is wrong ( = not empty and not a number)-->
+    <div id="modal-background" class="modal-background">
+        <div id="modal-content" class="modal-content">
+            The parameter entered is not recognized
+        </div>
+    </div>
+
+    <div id="form" class="form">
+        <input type="button" value="Go To Canvas Viewer" onclick="CanvasViewer()">
+        <hr>
+        <input type="number" id="index" name="indexInputBox" min="1" max="4" value="1">
+        <input type="button" value="Go To Canvas Editor" onclick="CanvasEditor()">
+    </div>
+    <script type="text/javascript" src="/script.js"></script>
+</body>
+
+</html>
