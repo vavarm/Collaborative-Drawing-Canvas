@@ -35,3 +35,4 @@ Here is where you can draw ! Before, you had to choose an index between 1 and 4 
 ## TODO
 - borders choice entry in the viewer to separate or not the differnent canvases
 - review the style of the different pages
+- in this readme file, add the resources that I used as examples and list the different modules used in the program
