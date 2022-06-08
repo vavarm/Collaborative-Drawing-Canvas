@@ -48,13 +48,26 @@ server.on("listening", () => {
 // Web sockets
 const io = require("socket.io")(server);
 
+// Canvases datas
+var numberOfCanvas = 4;
+var dataArray = new Array();
+
+for (let i = 0; i < 4; i++) {
+    dataArray[i] = new Array();
+}
+
 io.sockets.on("connection", (socket) => {
     console.log("Client connected: " + socket.id);
 
-    // arrays of datas
-    // send the arrays of datas to the client
+    // send the arrays of datas to the current client
+    socket.emit("mouse-init", dataArray);
 
-    socket.on("mouse", (data) => socket.broadcast.emit("mouse", data)); // + push data to the arrays of datas (in the correct indexed array)
+    socket.on("mouse", (data) => {
+        socket.broadcast.emit("mouse", data); // send datas to all the clients except for the current client
+
+        // push data to the arrays of datas (in the correct indexed array)
+        dataArray[data.id - 1].push(data);
+    });
 
     socket.on("disconnect", () => console.log("Client has disconnected"));
 });
